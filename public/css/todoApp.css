@@ -26,12 +26,32 @@ body {
   text-align: center;
   cursor: pointer;
 }
+#addToDO:focus {
+  outline: 0;
+}
 .boxItems {
   border: none;
 }
-#creator {
+.creator {
   padding: 3px;
   padding-left: 8px;
-  background-color: #F5F5F5	;
   border: none;
+}
+.even {
+  background-color: #F5F5F5	;
+}
+.odd {
+  background-color: rgb(180, 180, 180)
+}
+.hide {
+  display: none;
+}
+.btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  float: left;
+}
+.btn:focus {
+  outline: 0
 }
