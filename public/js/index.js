@@ -16,16 +16,25 @@ $(document).ready(function(){
   function setTodos() {
     $("#todoList").html('');
     allTodos.forEach(function(todo, index){
-      $("#todoList").append(`<div class='creator todoItem ${index % 2 ? 'even' : 'odd'}' id='todo${index}'><button class="btn hide delete"><i class="fa fa-trash"></i></button>${todo.todoName}</div>`)
+      $("#todoList").append(`<div class='creator todoItem ${index % 2 ? 'even' : 'odd'}' id='todo${index}'><button class="btn hide delete" id='${index}'><i class="fa fa-trash"></i></button>${todo.todoName}</div>`)
     })
-    todoHover()
+    todoHover();
+    deleteButton();
   }
+
   function todoHover(){
     $(".todoItem").on('mouseenter', function() {
       $(this).find(".btn").toggle('hide');
     })
     $(".todoItem").on('mouseleave', function() {
       $(this).find(".btn").toggle('hide');
+    })
+  }
+  function deleteButton() {
+    $(".delete").on('click', function(){
+      var id = $(this).attr('id');
+      allTodos.splice(id, 1);
+      setTodos();
     })
   }
 })
