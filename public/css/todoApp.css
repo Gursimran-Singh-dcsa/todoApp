@@ -8,6 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 30%;
 }
 .boxHeader {
   border: none;
@@ -52,6 +53,15 @@ body {
   border: none;
   float: left;
 }
+i {
+  height: inherit;
+}
 .btn:focus {
   outline: 0
+}
+.checkoff {
+  text-decoration: line-through;
+}
+.todoname {
+  margin: 2px;
 }
