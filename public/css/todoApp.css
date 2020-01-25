@@ -9,6 +9,7 @@ body {
   flex-direction: column;
   justify-content: center;
   max-width: 30%;
+  word-break: break-all;
 }
 .boxHeader {
   border: none;
